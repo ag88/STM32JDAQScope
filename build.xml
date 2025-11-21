@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+	<property name="tgtjarfile" value="STM32JDAQScope.jar" />
+	
+	<path id="classpath">
+	    <pathelement path="libs/jSerialComm-2.6.2.jar"/>
+	</path>
+	
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin">
+        	<classpath>
+        	  <pathelement path="${toString:classpath}"/>
+        	</classpath>
+        </javac>    	
+    </target>
+	
+	<target name="copyresource">
+		<copydir src="src/org/jdscope/icons/"
+		         dest="bin/org/jdscope/icons/"/>
+	</target>
+
+    <target name="jar" depends="compile,copyresource">
+        <manifestclasspath property="jar.classpath" jarfile="${tgtjarfile}">
+			<classpath refid="classpath" />
+		</manifestclasspath>
+        <jar destfile="${tgtjarfile}" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="org.jdscope.JDScopeApp"/>
+                <attribute name="Class-Path" value="${jar.classpath}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="${tgtjarfile}" fork="true"/>
+    </target>
+
+</project>
