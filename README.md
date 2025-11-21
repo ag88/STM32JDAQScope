@@ -2,6 +2,7 @@
 
 A Gui for [GirinoSTM32F103duino](https://github.com/ag88/GirinoSTM32F103duino)
 
+![screen](web/screen.png)
 # LICENSE
 
 APACHE 2 licensed.
