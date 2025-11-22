@@ -3,7 +3,15 @@
 A Gui for [GirinoSTM32F103duino](https://github.com/ag88/GirinoSTM32F103duino)
 
 ![screen](web/screen.png)
-# LICENSE
+
+## Run
+
+```
+java -jar STM32JDAQScope.jar
+```
+In some systems (e.g. Windows), simply double clicking on the jar file launches it.
+
+## LICENSE
 
 APACHE 2 licensed.
 
