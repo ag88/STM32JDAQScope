@@ -4,6 +4,11 @@ A Gui for [GirinoSTM32F103duino](https://github.com/ag88/GirinoSTM32F103duino)
 
 ![screen](web/screen.png)
 
+## Board
+
+- Note this is mainly intended for the [blackpill_f401.bin](https://github.com/ag88/GirinoSTM32F103duino/tree/master/bin)) firmware targetting
+[WeAct STM32F401 black pill](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1) board. It needs to have a 25 Mhz crystal (not the 8 Mhz one)
+
 ## Run
 
 ```
