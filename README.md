@@ -11,7 +11,7 @@ java -jar STM32JDAQScope.jar
 ```
 In some systems (e.g. Windows), simply double clicking on the jar file launches it.
 
-* note: The libs folder with jSerialComm-\*.jar should be in the libs sub directory in the current directory
+* note: The libs folder with jSerialComm-\*.jar should be a sub directory in the current directory
 
 ## LICENSE
 
